@@ -33,6 +33,9 @@ To set up the project go through the following steps in your terminal:
 
 Please follow these steps if you want to make any changes to the code base.
 
+0. Pull the changes from the main branch
+   - `git switch main`
+   - `git pull`
 1. Create new branch (and switch to it)
 <br> `git checkout -b {your initials}/{short_name}`
 <br> example branch name: `aw/update_readme`
