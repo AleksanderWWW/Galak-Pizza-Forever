@@ -2,7 +2,11 @@
 STARTHACK 2023 project code repository
 
 
-## Setup
+## For developers
+
+---
+
+### Setup
 
 To set up the project go through the following steps in your terminal:
 
@@ -24,3 +28,36 @@ To set up the project go through the following steps in your terminal:
 6. Verify the steps <br>
 `pre-commit --version  # out: pre-commit 3.2.0` <br>
 `pytest --version  # out: pytest 7.2.2` <br>
+
+### VC workflow
+
+Please follow these steps if you want to make any changes to the code base.
+
+1. Create new branch (and switch to it)
+<br> `git checkout -b {your initials}/{short_name}`
+<br> example branch name: `aw/update_readme`
+<br> **Attention**: `checkout -b` automatically switches you to the newly created branch
+2. Implement the change
+<br> Nothing to add here really
+3. Add changes to the staging area
+<br> `git add <name(s) of the file(s) you've changed>`
+<br> You can also use wildcard symbol `*` to add all changed files
+4. Commit changes - make sure that `pre-commit` checks all pass
+<br> `git commit -m <short commit message>`
+<br> `pre-commit` will be triggered automatically (may take a while the first time)
+If the formatters complain, just perform the steps no. 3 and 4 again.
+If it's the linter that fails - fix what it tells you to fix and perform
+steps no. 3 and 4 again.
+5. Push the changes
+   - if the pull request hasn't been created yet:
+   <br> `git push -u origin <branch name>`
+   <br> then click the link you'll see in the terminal and move to step no. 6
+   - if the pull request is already open:
+   <br> `git push` - and that's all
+6. Create a pull request (PR)
+<br> Use web UI to create a new Pull Request (see step no. 5). Would be
+nice to also leave a short comment explaining what you're doing with this
+PR.
+
+---
+<br> *Hint: `git status` is your best friend*
