@@ -7,8 +7,8 @@ import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/c
 })
 export class DashboardComponent implements OnInit{
   width: number;
-  height: number = 400;
-  depth: number = 400;
+  length: number = 400;
+  weight: number = 400;
   cost: number = 2;
   fileOver: boolean = true;
   @ViewChild("fileDropRef", { static: false }) fileDropEl!: ElementRef;
@@ -16,9 +16,9 @@ export class DashboardComponent implements OnInit{
 
 
   constructor() {
-    this.width = 400;
-    this.height = 400;
-    this.depth = 400;
+    this.width = 70;
+    this.length = 210;
+    this.weight = 50;
   }
   ngOnInit(): void {
   }
