@@ -1,5 +1,9 @@
 # Galak-Pizza-Forever
-STARTHACK 2023 project code repository
+STARTHACK 2023 project code repository - St. Gallen case.
+
+Our idea to use image recognition technology to improve and optimize the process of
+collecting bulk garbage. This way we can bring about an automated and easy-to-use as well
+as easy-to-manage solution that will benefit the citizens and the administration alike.
 
 
 ## For developers
@@ -64,3 +68,12 @@ PR.
 
 ---
 <br> Hint: `git status` is your best friend
+
+---
+
+### Authors
+The solution is developed by a team of four (enumerated alphabetically by the surname)
+- Jan Masny
+- Tudor Pitic
+- Aleksander Wojnarowicz
+- Joanna Zurad
