@@ -6,15 +6,19 @@ import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/c
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit{
-  private width: number = 400;
-  private height: number = 400;
-  private depth: number = 400;
-  private fileOver: boolean = true;
+  width: number;
+  height: number = 400;
+  depth: number = 400;
+  cost: number = 2;
+  fileOver: boolean = true;
   @ViewChild("fileDropRef", { static: false }) fileDropEl!: ElementRef;
   files: any[] = [];
 
 
   constructor() {
+    this.width = 400;
+    this.height = 400;
+    this.depth = 400;
   }
   ngOnInit(): void {
   }

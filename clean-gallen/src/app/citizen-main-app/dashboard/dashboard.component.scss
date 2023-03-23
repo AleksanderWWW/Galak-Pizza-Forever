@@ -167,6 +167,26 @@
   background-color: #DB1F2F;
 }
 
-.dimensions {
+.dimensions-container {
+  display: grid;
 
+}
+
+
+.image-dimensions {
+  grid-column: 1;
+
+  background-color: antiquewhite;
+  background-image: url("/assets/images/couch.png");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.dimensions {
+  grid-column: 2;
+  padding: 2em;
+}
+.cost {
+  padding: 10px 0 10px;
 }

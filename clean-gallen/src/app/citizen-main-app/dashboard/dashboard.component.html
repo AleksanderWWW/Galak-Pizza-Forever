@@ -31,13 +31,25 @@
       </mat-step>
       <mat-step>
         <ng-template matStepLabel>Check Dimensions</ng-template>
-        <div class="dimensions">
-          width: {{this.width}};
+        <div class="dimensions-container">
+          <div class="image-dimensions"></div>
+          <div class="dimensions">
+            <h3>width: </h3>
+            <p>{{this.width}}</p>
+            <h3>height: </h3>
+            <p>{{this.height}}</p>
+            <h3>depth: </h3>
+            <p>{{this.depth}}</p>
+            <button mat-stroked-button>Edit measurements</button>
+          </div>
         </div>
       </mat-step>
       <mat-step>
         <ng-template matStepLabel>Cost</ng-template>
-        Third
+        <div class="cost">
+          <span style="color: RGB(219, 31, 47); font-weight: bold; font-size: x-large">Stamps required: </span>
+          <span style="font-weight: bold; font-size: x-large">{{this.cost}}</span>
+        </div>
       </mat-step>
     </mat-stepper>
   </div>
