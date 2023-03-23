@@ -3,3 +3,6 @@ starthack
 # PyCharm dir
 .idea
 .ipynb_checkpoints
+
+# Tf model
+notebooks/models
