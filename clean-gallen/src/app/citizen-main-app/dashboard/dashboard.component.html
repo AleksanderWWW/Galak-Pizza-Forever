@@ -1,0 +1,24 @@
+<div class="content-wrapper">
+  <div class="content-container mat-elevation-z4">
+    <mat-stepper orientation="vertical" [linear]="true" #stepper>
+      <mat-step>
+        <div class="dropzone">
+          <input type="file" #fileDropRef id="fileDropRef" multiple (change)="fileBrowseHandler($event.target)">
+          <mat-icon>attach_file</mat-icon>
+          <h3>Drag and drop images here</h3>
+          <h3>or</h3>
+          <label for="fileDropRef">Browse for file</label>
+        </div>
+      </mat-step>
+      <mat-step>
+        Second
+      </mat-step>
+      <mat-step>
+        Third
+      </mat-step>
+      <mat-step>
+        Fourth
+      </mat-step>
+    </mat-stepper>
+  </div>
+</div>

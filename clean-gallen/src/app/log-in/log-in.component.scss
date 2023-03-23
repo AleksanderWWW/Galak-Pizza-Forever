@@ -1,0 +1,47 @@
+
+//:host {
+//  display: flex;
+//  justify-content: center;
+//  margin: 100px 0px;
+//}
+
+.bg-img {
+  /* The image used */
+  background-color: antiquewhite;
+  background-image: url("/assets/images/ebenalp-switzerland.webp");
+
+  /* Control the height of the image */
+  min-height: 380px;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 300px;
+}
+
+.error {
+  padding: 16px;
+  width: 300px;
+  color: white;
+  background-color: red;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.context {
+  position: absolute;
+  width: 100%;
+  top:calc(50% - 234px/2);
+  display: flex;
+  justify-content: center;
+}
