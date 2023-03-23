@@ -2,6 +2,7 @@
   <div class="content-container mat-elevation-z4">
     <mat-stepper orientation="vertical" [linear]="true" #stepper>
       <mat-step>
+        <ng-template matStepLabel>Upload picture of bulky item</ng-template>
         <div class="dropzone">
           <input type="file" #fileDropRef id="fileDropRef" multiple (change)="fileBrowseHandler($event)">
           <img src="assets/icons/ic-upload-file.svg" alt="">
@@ -29,13 +30,14 @@
         </div>
       </mat-step>
       <mat-step>
-        Second
+        <ng-template matStepLabel>Check Dimensions</ng-template>
+        <div class="dimensions">
+          width: {{this.width}};
+        </div>
       </mat-step>
       <mat-step>
+        <ng-template matStepLabel>Cost</ng-template>
         Third
-      </mat-step>
-      <mat-step>
-        Fourth
       </mat-step>
     </mat-stepper>
   </div>

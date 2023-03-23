@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatStepperModule} from "@angular/material/stepper";
 import {MatIconModule} from "@angular/material/icon";
 import { DndDirective } from './dashboard/dnd.directive';
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DndDirective } from './dashboard/dnd.directive';
     CommonModule,
     CitizenMainAppRoutingModule,
     MatStepperModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [
     CitizenMainAppRoutingModule
