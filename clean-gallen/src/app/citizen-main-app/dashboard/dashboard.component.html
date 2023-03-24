@@ -1,0 +1,56 @@
+<div class="content-wrapper">
+  <div class="content-container mat-elevation-z4">
+    <mat-stepper orientation="vertical" [linear]="true" #stepper>
+      <mat-step>
+        <ng-template matStepLabel>Upload picture of bulky item</ng-template>
+        <div class="dropzone">
+          <input type="file" #fileDropRef id="fileDropRef" multiple (change)="fileBrowseHandler($event)">
+          <img src="assets/icons/ic-upload-file.svg" alt="">
+          <h3>Drag and drop images here</h3>
+          <h3>or</h3>
+          <label for="fileDropRef">Browse for file</label>
+        </div>
+        <div class="files-list">
+          <div class="single-file" *ngFor="let file of files; let i = index">
+            <img src="assets/icons/ic-file.svg" width="45px" alt="file">
+            <div class="info">
+              <h4 class="name">
+                {{ file?.name }}
+              </h4>
+              <p class="size">
+                {{ formatBytes(file?.size) }}
+              </p>
+              <div class="progress-cont">
+                <div class="progress" [style.width]="file?.progress + '%'">
+                </div>
+              </div>
+            </div>
+            <img src="assets/icons/ic-delete-file.svg" class="delete" width="20px" alt="file" (click)="deleteFile(i)">
+          </div>
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Check Dimensions</ng-template>
+        <div class="dimensions-container">
+          <div class="image-dimensions"></div>
+          <div class="dimensions">
+            <h3>width: </h3>
+            <p>{{this.width}} cm</p>
+            <h3>length: </h3>
+            <p>{{this.length}} cm</p>
+            <h3>weight: </h3>
+            <p>{{this.weight}} kg</p>
+            <button mat-stroked-button>Edit measurements</button>
+          </div>
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Cost</ng-template>
+        <div class="cost">
+          <span style="color: RGB(219, 31, 47); font-weight: bold; font-size: x-large">Stamps required: </span>
+          <span style="font-weight: bold; font-size: x-large">{{this.cost}}</span>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </div>
+</div>
